@@ -3,7 +3,7 @@
 
 syntax = "proto3";
 
-package dala;
+package grpc;
 
 option go_package = "./grpc_python";
 
