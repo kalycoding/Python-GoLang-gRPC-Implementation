@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// dala/grpcs/[dala_types.proto]
+
+syntax = "proto3";
+
+package dala;
+
+option go_package = "./grpc_python";
+
+message UserRequest {
+    string      ID              =   1;
+    string      Username        =   2;
+    string      Firstname       =   3;
+    string      Lastname        =   4;
+    string      DOB             =   5;
+    int32       Age             =   6;
+    bool        isAdmin         =   7;
+}
+
+message UserResponse {
+    string      ID              =   1;
+    string      Username        =   2;
+    string      Firstname       =   3;
+    string      Lastname        =   4;
+    string      DOB             =   5;
+    int32       Age             =   6;
+    bool        isAdmin         =   7;
+}
+
+// end
+
+service CreateUser {
+    rpc Create (UserRequest) returns (UserResponse) {}
+}
+
+
